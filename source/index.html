@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -11,10 +11,174 @@
       <div class="header__logo-wrapper">
         <a class="header__logo logo" href="index.html">
           <picture>
-            <img class="logo__icon" src="img/icons/logo.svg" width="32" height="36" alt="Логотип Drink2Go.">
+            <source media="(min-width: 1440px)" srcset="img/icons/stack.svg#logo-desktop" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="img/icons/stack.svg#logo-tablet" width="82" height="36">
+            <img class="logo__icon" src="img/icons/stack.svg#logo" width="32" height="36" alt="Логотип Drink2Go.">
           </picture>
         </a>
+        <span class="header__logo-description">
+          Интернет-магазин кофейных напитков
+        </span>
       </div>
+      <nav class="navigation navigation--closed">
+        <ul class="navigation__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--current" href="index.html">Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Каталог</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Доставка</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">О Нас</a>
+          </li>
+        </ul>
+        <ul class="navigation_user-list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list-icon" width="16" height="16">
+                <use href="/img/icons/stack.svg#user"></use>
+              </svg>
+              <span class="user-list__description">
+                Войти
+              </span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list-icon" width="16" height="16" role="img">
+                <use href="/img/icons/stack.svg#basket"></use>
+              </svg>
+              <span class="user-list__description">
+                Корзина
+              </span>
+            </a>
+          </li>
+        </ul>
+        <a class="navigation__toggle">
+          <span class="visually-hidden">
+            Открыть меню.
+          </span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="slider swiper">
+        <div class="slider__wrapper swiper__wrapper">
+          <div class="swiper-slide slider__item slider__item--flat-white">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">Новинка!</span>
+              <h1 class="slider__item-title">Декаф Флэт Уайт</h1>
+              <p class="slider__item-description">
+                Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="slider__item-order">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">295</span>
+                  <span class="slider__item-price">225</span>
+                </div>
+                  <a class="slider__item-button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slider__item slider__item--lavender-latte">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">Новинка!</span>
+              <h1 class="slider__item-title">Лавандовый Латте</h1>
+              <p class="slider__item-description">
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+              <div class="slider__item-order">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">285</span>
+                  <span class="slider__item-price">265</span>
+                </div>
+                  <a class="slider__item-button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slider__item slider__item--triple-espresso">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">Новинка!</span>
+              <h1 class="slider__item-title">Тройной Эспрессо</h1>
+              <p class="slider__item-description">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="slider__item-order">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">395</span>
+                  <span class="slider__item-price">375</span>
+                </div>
+                  <a class="slider__item-button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <span class="features__text-badge">Преимущества</span>
+        <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--speed">
+            <h3 class="features__item-title">
+              Скорость
+            </h3>
+            <p class="features__item-decription">
+              Готовый напиток всегда под рукой — просто открой банку
+            </p>
+          </li>
+          <li class="features__item features__item--fit">
+            <h3 class="features__item-title">
+              Удобство
+            </h3>
+            <p class="features__item-decription">
+              Легко помещается и в карман, и в маленькую сумочку
+            </p>
+          </li>
+          <li class="features__item features__item--energy">
+            <h3 class="features__item-title">
+              Бодрость
+            </h3>
+            <p class="features__item-decription">
+              Сбалансированная доза кофеина даст мощный заряд энергии
+            </p>
+          </li>
+          <li class="features__item features__item--eco">
+            <h3 class="features__item-title">
+              Экологичность
+            </h3>
+            <p class="features__item-decription">
+              Вся упаковка сделана из перерабатываемых материалов
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <span class="catalog__text-badge">Каталог</span>
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
+          <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="catalog__fieldsets-wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="form__legemd">
+                  Цена
+                </legend>
+                <div class="form__range"></div>
+                <div class="form__input_wrapper">
+                  <input class="form__input form__input--min" name="min" min="0" step="1" max="1000" type="number" placeholder="0" required>
+                  <input class="form__input form__input--max" name="max" min="0" step="1" max="1000" type="number" placeholder="900" required>
+                </div>
+              </fieldset>
+              <fieldset class="">
+
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
     <script src="./js/script.js" defer></script>
   </body>
 </html>

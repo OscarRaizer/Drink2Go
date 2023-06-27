@@ -1,0 +1,51 @@
+@import "../global/variables.scss";
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navigation__list {
+  @media (min-width: $tablet-width) {
+    margin: 0 60px 0 0;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 162px 0 0;
+  }
+}
+
+.navigation_user-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__toggle {
+  padding: 22px;
+  margin: 0;
+  display: block;
+  width: 16px;
+  height: 12px;
+  background-color: #000000;
+  cursor: pointer;
+  border: none;
+  mask-image: url("/img/icons/stack.svg#close-menu");
+  mask-size: 16px 106px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.navigation--closed .navigation__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}

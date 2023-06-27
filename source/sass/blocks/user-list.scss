@@ -1,0 +1,31 @@
+@import "../global/variables.scss";
+
+.user-list {
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.user-list__link {
+  display: flex;
+  gap: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-list__description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    color: $base-black;
+    text-decoration: none;
+  }
+}
+
+.user-list__item {
+  padding: 22px;
+}

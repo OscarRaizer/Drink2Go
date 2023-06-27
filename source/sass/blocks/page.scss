@@ -1,0 +1,19 @@
+@import "../global/variables.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-black;
+  min-width: 280px;
+  min-height: 100%;
+}
