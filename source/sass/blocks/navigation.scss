@@ -2,7 +2,6 @@
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -29,10 +28,10 @@
   display: block;
   width: 16px;
   height: 12px;
-  background-color: #000000;
+  background-color: $base-black;
   cursor: pointer;
   border: none;
-  mask-image: url("/img/icons/stack.svg#close-menu");
+  mask-image: url("../../img/icons/stack.svg#navigation-opened");
   mask-size: 16px 106px;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -42,8 +41,39 @@
   }
 }
 
+.navigation--closed .navigation__toggle {
+  mask-image: url("../../img/icons/stack.svg#close-menu");
+}
+
 .navigation--closed .navigation__list {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.navigation--opened .navigation__list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.navigation--nojs {
+  position: static;
+  min-height: 0;
+}
+
+.navigation--nojs .navigation__list {
+  display: block;
+  position: static;
 
   @media (min-width: $tablet-width) {
     display: flex;
