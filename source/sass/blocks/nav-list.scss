@@ -1,11 +1,13 @@
 @import "../global/variables.scss";
 
 .nav-list {
-  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
