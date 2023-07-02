@@ -12,6 +12,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+    gap: 20px;
+  }
 }
 
 .nav-list__item {

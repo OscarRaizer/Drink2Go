@@ -3,6 +3,11 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    align-items: stretch;
+  }
 }
 
 .form__fieldsets-wrapper {
@@ -10,6 +15,7 @@
     display: flex;
     gap: 30px;
     margin-bottom: 40px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,6 +30,15 @@
 
   &--inputs-number {
     margin-bottom: 30px;
+    max-width: 280px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 223px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 318px;
+    }
   }
 
   &--inputs-radio {
@@ -54,12 +69,30 @@
   height: 2px;
   border-radius: 20px;
   background-color: $light-grey;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
 .form__range-bar {
   position: relative;
   height: 4px;
   background-color: $primary-lighter;
+  width: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
 }
 
 .form__range-toggle {
@@ -104,6 +137,8 @@
 
 .form__input {
   &--number {
+    box-sizing: border-box;
+    width: 118px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +152,12 @@
     color: $base-black;
     border: 2px solid $primary-lighter;
     border-radius: 4px;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
 
     &::placeholder {
       font-weight: 500;
@@ -127,6 +168,12 @@
 
     @media (min-width: $tablet-width) {
       padding: 6px 15px;
+      width: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      padding: 6px 25px;
     }
   }
 
@@ -238,14 +285,20 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
   }
 }
 
 .form__label {
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
 }

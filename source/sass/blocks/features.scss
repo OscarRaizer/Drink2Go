@@ -60,7 +60,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 120px 30px;
   }
 }
 
@@ -77,8 +77,8 @@
   }
 
   &--speed {
-    &::before{
-    background-image: url("../../img/icons/stack.svg#features-icon-speed");
+    &::before {
+      background-image: url("../../img/icons/stack.svg#features-icon-speed");
     }
   }
 
