@@ -17,6 +17,7 @@
   align-items: center;
   position: relative;
   padding: 310px 20px 60px;
+  z-index: 1;
 
   &--flat-white {
     background-image: image-set("../../img/flat-white/flat-white-mobile@1x.webp" 1x, "../../img/flat-white/flat-white-mobile@1x.png" 1x, "../../img/flat-white/flat-white-mobile@2x.webp" 2x, "../../img/flat-white/flat-white-mobile@2x.png" 2x);
