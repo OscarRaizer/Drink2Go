@@ -1,102 +1,135 @@
 @import "../global/variables.scss";
 
-.slider {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-}
-
 .slider__list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
+.slider__item-wrapper {
+  max-width: 3840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+  }
+}
+
 .slider__item {
-  display: none;
+  box-sizing: border-box;
+  display: flex;
+  min-width: 0;
   flex-direction: column;
   align-items: center;
   position: relative;
   padding: 310px 20px 60px;
-  z-index: 1;
+
+  .slider__item-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -290px;
+    width: 280px;
+    height: 280px;
+    background-repeat: no-repeat;
+  }
 
   &--flat-white {
-    background-image: image-set("../../img/flat-white/flat-white-mobile@1x.webp" 1x, "../../img/flat-white/flat-white-mobile@1x.png" 1x, "../../img/flat-white/flat-white-mobile@2x.webp" 2x, "../../img/flat-white/flat-white-mobile@2x.png" 2x);
-    background-repeat: no-repeat;
-    background-position: center 30px;
     background-color: $flat-white;
+
+    .slider__item-wrapper::before {
+      background-image: image-set("../img/flat-white/flat-white-mobile@1x.webp" 1x, "../img/flat-white/flat-white-mobile@1x.png" 1x, "../img/flat-white/flat-white-mobile@2x.webp" 2x, "../img/flat-white/flat-white-mobile@2x.png" 2x);
+    }
   }
 
   &--lavender-latte {
-    background-image: image-set("../../img/lavender/lavender-mobile@1x.webp" 1x, "../../img/lavender/lavender-mobile@1x.png" 1x, "../../img/lavender/lavender-mobile@2x.webp" 2x, "../../img/lavender/lavender-mobile@2x.png" 2x);
-    background-repeat: no-repeat;
-    background-position: center 30px;
     background-color: $lavender-latte;
+
+    .slider__item-wrapper::before {
+      background-image: image-set("../img/lavender/lavender-mobile@1x.webp" 1x, "../img/lavender/lavender-mobile@1x.png" 1x, "../img/lavender/lavender-mobile@2x.webp" 2x, "../img/lavender/lavender-mobile@2x.png" 2x);
+    }
   }
 
   &--espresso {
-    background-image: image-set("../../img/espresso/espresso-mobile@1x.webp" 1x, "../../img/espresso/espresso-mobile@1x.png" 1x, "../../img/espresso/espresso-mobile@2x.webp" 2x, "../../img/lavender/lavender-mobile@2x.png" 2x);
-    background-repeat: no-repeat;
-    background-position: center 30px;
     background-color: $espresso;
-  }
 
-  &--current {
-    display: flex;
+    .slider__item-wrapper::before {
+      background-image: image-set("../img/espresso/espresso-mobile@1x.webp" 1x, "../img/espresso/espresso-mobile@1x.png" 1x, "../img/espresso/espresso-mobile@2x.webp" 2x, "../img/espresso/espresso-mobile@2x.png" 2x);
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding: 60px 80px 308px;
-    background-image: none;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -188px;
+    .slider__item-wrapper::before {
       z-index: 2;
       width: 476px;
       height: 476px;
+      top: auto;
+      bottom: -497px;
     }
 
     &--flat-white {
-      &::before {
-        background-image: image-set("../../img/flat-white/flat-white-tablet@1x.webp" 1x, "../../img/flat-white/flat-white-tablet@1x.png" 1x, "../../img/flat-white/flat-white-tablet@2x.webp" 2x, "../../img/flat-white/flat-white-tablet@2x.png" 2x);
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/flat-white/flat-white-tablet@1x.webp" 1x, "../img/flat-white/flat-white-tablet@1x.png" 1x, "../img/flat-white/flat-white-tablet@2x.webp" 2x, "../img/flat-white/flat-white-tablet@2x.png" 2x);
       }
     }
 
     &--lavender-latte {
-      &::before {
-        background-image: image-set("../../img/lavender/lavender-tablet@1x.webp" 1x, "../../img/lavender/lavender-tablet@1x.png" 1x, "../../img/lavender/lavender-tablet@2x.webp" 2x, "../../img/lavender/lavender-tablet@2x.png" 2x);
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/lavender/lavender-tablet@1x.webp" 1x, "../img/lavender/lavender-tablet@1x.png" 1x, "../img/lavender/lavender-tablet@2x.webp" 2x, "../img/lavender/lavender-tablet@2x.png" 2x);
       }
     }
 
     &--espresso {
-      &::before {
-        background-image: image-set("../../img/espresso/espresso-tablet@1x.webp" 1x, "../../img/espresso/espresso-tablet@1x.png" 1x, "../../img/espresso/espresso-tablet@2x.webp" 2x, "../../img/lavender/espresso-tablet@2x.png" 2x);
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/espresso/espresso-tablet@1x.webp" 1x, "../img/espresso/espresso-tablet@1x.png" 1x, "../img/espresso/espresso-tablet@2x.webp" 2x, "../img/espresso/espresso-tablet@2x.png" 2x);
       }
     }
   }
 
   @media (min-width: $desktop-width) {
     align-items: flex-start;
-    padding: 180px 80px 242px 655px;
+    padding: 180px 80px 242px 735px;
+
+    .slider__item-wrapper::before {
+      content: "";
+      position: absolute;
+      bottom: auto;
+      top: 0;
+      left: -630px;
+      transform: translateY(-25%);
+      width: 600px;
+      height: 600px;
+    }
 
     &::before {
       content: none;
     }
 
     &--flat-white {
-      background-image: image-set("../../img/flat-white/flat-white-desktop@1x.webp" 1x, "../../img/flat-white/flat-white-desktop@1x.png" 1x, "../../img/flat-white/flat-white-desktop@2x.webp" 2x, "../../img/flat-white/flat-white-desktop@2x.png" 2x);
-      background-position: 40px 30px;
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/flat-white/flat-white-desktop@1x.webp" 1x, "../img/flat-white/flat-white-desktop@1x.png" 1x, "../img/flat-white/flat-white-desktop@2x.webp" 2x, "../img/flat-white/flat-white-desktop@2x.png" 2x);
+      }
+
+      .slider__item-description {
+        padding: 0 20px 0 0;
+      }
     }
 
     &--lavender-latte {
-      background-image: image-set("../../img/lavender/lavender-desktop@1x.webp" 1x, "../../img/lavender/lavender-desktop@1x.png" 1x, "../../img/lavender/lavender-desktop@2x.webp" 2x, "../../img/lavender/lavender-desktop@2x.png" 2x);
-      background-position: 40px 30px;
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/lavender/lavender-desktop@1x.webp" 1x, "../img/lavender/lavender-desktop@1x.png" 1x, "../img/lavender/lavender-desktop@2x.webp" 2x, "../img/lavender/lavender-desktop@2x.png" 2x);
+      }
     }
 
     &--espresso {
-      background-image: image-set("../../img/espresso/espresso-desktop@1x.webp" 1x, "../../img/espresso/espresso-desktop@1x.png" 1x, "../../img/espresso/espresso-desktop@2x.webp" 2x, "../../img/lavender/espresso-desktop@2x.png" 2x);
-      background-position: 40px 30px;
+      .slider__item-wrapper::before {
+        background-image: image-set("../img/espresso/espresso-desktop@1x.webp" 1x, "../img/espresso/espresso-desktop@1x.png" 1x, "../img/espresso/espresso-desktop@2x.webp" 2x, "../img/espresso/espresso-desktop@2x.png" 2x);
+      }
     }
   }
 }
@@ -108,6 +141,7 @@
   line-height: 48px;
   font-weight: 700;
   text-align: center;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
@@ -123,12 +157,23 @@
   margin-top: 0;
   margin-bottom: 20px;
 
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    padding: 0 10px;
     font-size: 20px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 40px;
     text-align: left;
   }
 }
@@ -138,11 +183,12 @@
   font-weight: 700;
   text-transform: uppercase;
   color: $base-primary;
+  text-align: center;
 }
 
 .slider__item-price-wrapper {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 6px;
 }
 
@@ -162,6 +208,7 @@
 .slider__item-order-wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 
