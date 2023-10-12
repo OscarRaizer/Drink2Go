@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="header">
@@ -77,195 +81,92 @@
         Drink2Go - интернет-магазин кофейных напитков
       </h1>
       <section class="swiper slider">
-        <ul class="slider__list">
-          <li class="slider__item slider__item--flat-white slider__item--current">
-            <span class="slider__text-badge">
-              Новинка!
-            </span>
-            <h2 class="slider__item-title">
-              Декаф Флэт Уайт
-            </h2>
-            <p class="slider__item-description">
-              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-            </p>
-            <div class="slider__item-order-wrapper">
-              <div class="slider__item-price-wrapper">
-                <span class="slider__item-old-price">
-                  295₽
-                </span>
-                <span class="slider__item-price">
-                  225₽
-                </span>
+        <div class="swiper-wrapper slider__wrapper">
+          <div class="swiper-slide slider__item slider__item--flat-white">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">
+                Новинка!
+              </span>
+              <h2 class="slider__item-title">
+                Декаф Флэт Уайт
+              </h2>
+              <p class="slider__item-description">
+                Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="slider__item-order-wrapper">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">
+                    295₽
+                  </span>
+                  <span class="slider__item-price">
+                    225₽
+                  </span>
+                </div>
+                <a class="slider__item-button-order button" href="#">
+                  Заказать
+                </a>
               </div>
-              <a class="slider__item-button-order button" href="#">
-                Заказать
-              </a>
             </div>
-            <div class="slider__item-arrows-wrapper">
-              <button type="button" class="slider__item-arrow slider__item-arrow--left">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-icon-left"></use>
-                </svg>
-                <span class="visually-hidden">
-                  Предыдущий слайд.
-                </span>
-              </button>
-              <button type="button" class="slider__item-arrow slider__item-arrow--right">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-icon-right"></use>
-                </svg>
-                <span class="visually-hidden">
-                  Следующий слайд.
-                </span>
-              </button>
-            </div>
-            <ul class="slider__item-pagination">
-              <li>
-                <button class="slider__item-pagination-button slider__item-pagination-button--current">
-                  <span class="visually-hidden">
-                    1 слайд
+          </div>
+          <div class="swiper-slide slider__item slider__item--lavender-latte">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">
+                Новинка!
+              </span>
+              <h2 class="slider__item-title">
+                Лавандовый Латте
+              </h2>
+              <p class="slider__item-description">
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+              <div class="slider__item-order-wrapper">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">
+                    285₽
                   </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    2 слайд
+                  <span class="slider__item-price">
+                    265₽
                   </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    3 слайд
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </li>
-          <li class="slider__item slider__item--lavender-latte">
-            <span class="slider__text-badge">
-              Новинка!
-            </span>
-            <h2 class="slider__item-title">
-              Лавандовый Латте
-            </h2>
-            <p class="slider__item-description">
-              Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-            </p>
-            <div class="slider__item-order-wrapper">
-              <div class="slider__item-price-wrapper">
-                <span class="slider__item-old-price">
-                  285₽
-                </span>
-                <span class="slider__item-price">
-                  265₽
-                </span>
+                </div>
+                <a class="slider__item-button-order button" href="#">
+                  Заказать
+                </a>
               </div>
-              <a class="slider__item-button-order button" href="#">
-                Заказать
-              </a>
             </div>
-            <div class="slider__item-arrows-wrapper">
-              <button type="button" class="slider__item-arrow slider__item-arrow--left">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-left-icon"></use>
-                </svg>
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button type="button" class="slider__item-arrow slider__item-arrow--right">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-right-icon"></use>
-                </svg>
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
-            </div>
-            <ul class="slider__item-pagination">
-              <li>
-                <button class="slider__item-pagination-button slider__item-pagination-button--current">
-                  <span class="visually-hidden">
-                    1 слайд
+          </div>
+          <div class="swiper-slide slider__item slider__item--espresso">
+            <div class="slider__item-wrapper">
+              <span class="slider__text-badge">
+                Новинка!
+              </span>
+              <h2 class="slider__item-title">
+                Тройной Эспрессо
+              </h2>
+              <p class="slider__item-description">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="slider__item-order-wrapper">
+                <div class="slider__item-price-wrapper">
+                  <span class="slider__item-old-price">
+                    395₽
                   </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    2 слайд
+                  <span class="slider__item-price">
+                    375₽
                   </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    3 слайд
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </li>
-          <li class="slider__item slider__item--espresso">
-            <span class="slider__text-badge">
-              Новинка!
-            </span>
-            <h2 class="slider__item-title">
-              Тройной Эспрессо
-            </h2>
-            <p class="slider__item-description">
-              Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
-            </p>
-            <div class="slider__item-order-wrapper">
-              <div class="slider__item-price-wrapper">
-                <span class="slider__item-old-price">
-                  395₽
-                </span>
-                <span class="slider__item-price">
-                  375₽
-                </span>
+                </div>
+                <a class="slider__item-button-order button" href="#">
+                  Заказать
+                </a>
               </div>
-              <a class="slider__item-button-order button" href="#">
-                Заказать
-              </a>
             </div>
-            <div class="slider__item-arrows-wrapper">
-              <button type="button" class="slider__item-arrow slider__item-arrow--left">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-left-icon"></use>
-                </svg>
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button type="button" class="slider__item-arrow slider__item-arrow--right">
-                <svg class="slider__item-arrow-icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#arrow-right-icon"></use>
-                </svg>
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
-            </div>
-            <ul class="slider__item-pagination">
-              <li>
-                <button class="slider__item-pagination-button slider__item-pagination-button--current">
-                  <span class="visually-hidden">
-                    1 слайд
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    2 слайд
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button class="slider__item-pagination-button">
-                  <span class="visually-hidden">
-                    3 слайд
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
       </section>
       <section class="features">
         <span class="features__text-badge">
@@ -616,142 +517,129 @@
         </h2>
         <div id="map" class="map__wrapper"></div>
       </section>
-      <footer class="footer">
-        <div class="footer__inner-wrapper footer__inner-wrapper--logo-and-social">
-          <div class="footer__logo-wrapper">
-            <a class="footer__logo logo" href="index.html">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/icons/stack.svg#logo-desktop" width="170" height="36">
-                <img class="logo__icon" src="img/icons/stack.svg#logo-tablet" width="82" height="36" alt="Логотип Drink2Go.">
-              </picture>
-            </a>
-            <span class="footer__logo-description">
-              Интернет-магазин кофейных напитков
-            </span>
-          </div>
-          <ul class="footer__social social">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="#">
-                <svg class="social__icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#logo-vk"></use>
-                </svg>
-                <span class="visually-hidden">В контакте.</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--pintesert" href="#">
-                <svg class="social__icon" width="22" height="22" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#logo-pinterest"></use>
-                </svg>
-                <span class="visually-hidden">Пинтерест.</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--ok" href="#">
-                <svg class="social__icon" width="20" height="20" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#logo-ok"></use>
-                </svg>
-                <span class="visually-hidden">Одноклассники.</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__inner-wrapper">
-          <h2 class="footer__title">
-            Интернет-магазин
-          </h2>
-          <nav class="footer__navigation">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Каталог
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Доставка
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Способы оплаты
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  О нас
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer__inner-wrapper">
-          <h2 class="footer__title">
-            Медиа
-          </h2>
-          <nav class="footer__navigation">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Блог
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Информация для СМИ
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Правовая информация
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer__inner-wrapper footer__inner-wrapper--contacts">
-          <h2 class="footer__title">
-            Контакты
-          </h2>
-          <ul class="footer__list footer__list--contacts">
-            <li class="footer__item">
-              <a class="footer__link" href="#">
-                <svg class="footer__icon" width="13" height="16" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#icon-adress"></use>
-                </svg>
-                <address class="footer__address">
-                  Санкт-Петербург, набережная реки Карповки, дом 5
-                </address>
-              </a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="tel:79999999999">
-                <svg class="footer__icon" width="13" height="16" fill="defaultColor" role="img">
-                  <use href="img/icons/stack.svg#icon-phone"></use>
-                </svg>
-                +7 (999) 999-99-99
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__inner-wrapper footer__inner-wrapper--copyright">
-          <span class="footer__copyright-text">
-            Разработано в
-            <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-              HTML Academy
-              <svg class="footer__copyright-icon" width="12" height="16" fill="defaultColor" role="img">
-                <use href="img/icons/stack.svg#copyright"></use>
-              </svg>
-            </a>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner-wrapper footer__inner-wrapper--logo-and-social">
+        <div class="footer__logo-wrapper">
+          <a class="footer__logo logo" href="index.html">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/icons/stack.svg#logo-desktop" width="170" height="36">
+              <img class="logo__icon" src="img/icons/stack.svg#logo-tablet" width="82" height="36" alt="Логотип Drink2Go.">
+            </picture>
+          </a>
+          <span class="footer__logo-description">
+            Интернет-магазин кофейных напитков
           </span>
         </div>
-      </footer>
-      <script src="./js/main.js" type="module"></script>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-      <script src="./js/main.js" type="module"></script>
-      crossorigin=""></script>
-    </main>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <svg class="social__icon" width="20" height="20" fill="defaultColor" role="img">
+                <use href="img/icons/stack.svg#logo-vk"></use>
+              </svg>
+              <span class="visually-hidden">В контакте.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--pintesert" href="#">
+              <svg class="social__icon" width="22" height="22" fill="defaultColor" role="img">
+                <use href="img/icons/stack.svg#logo-pinterest"></use>
+              </svg>
+              <span class="visually-hidden">Пинтерест.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#">
+              <svg class="social__icon" width="20" height="20" fill="defaultColor" role="img">
+                <use href="img/icons/stack.svg#logo-ok"></use>
+              </svg>
+              <span class="visually-hidden">Одноклассники.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__inner-wrapper">
+        <h2 class="footer__title">
+          Интернет-магазин
+        </h2>
+        <nav class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Способы оплаты
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                О нас
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__inner-wrapper">
+        <h2 class="footer__title">
+          Медиа
+        </h2>
+        <nav class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Блог
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Информация для СМИ
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Правовая информация
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__inner-wrapper footer__inner-wrapper--contacts">
+        <h2 class="footer__title">
+          Контакты
+        </h2>
+        <ul class="footer__list footer__list--contacts">
+          <li class="footer__item">
+            <a class="footer__link" href="#">
+              <svg class="footer__icon" width="13" height="16" fill="defaultColor" role="img">
+                <use href="img/icons/stack.svg#icon-adress"></use>
+              </svg>
+              <address class="footer__address">
+                Санкт-Петербург, набережная реки Карповки, дом 5
+              </address>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="tel:79999999999">
+              <svg class="footer__icon" width="13" height="16" fill="defaultColor" role="img">
+                <use href="img/icons/stack.svg#icon-phone"></use>
+              </svg>
+              +7 (999) 999-99-99
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>
